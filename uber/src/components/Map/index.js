@@ -11,6 +11,8 @@ import {getPixelSize} from '../../utils';
 import marcador from '../../assets/marker.png';
 import back from '../../assets/back.png';
 
+import config from '../../../config';
+
 import {
   Back,
   LocationBox,
@@ -22,7 +24,7 @@ import {
 
 import Details from '../Details';
 
-Geocoder.init('AIzaSyCgY0BEGf6PnFra_HyxPqT7dc3vXYWU6GQ');
+Geocoder.init(config.apikey);
 
 export default class Map extends React.Component {
   state = {

@@ -3,6 +3,8 @@ import React from 'react';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
 import {Platform} from 'react-native';
 
+import config from '../../../config';
+
 export default class Search extends React.Component {
   state = {
     searchFocused: false,
@@ -17,7 +19,7 @@ export default class Search extends React.Component {
         placeholderTextColor="#333"
         onPress={onLocationSelected}
         query={{
-          key: 'AIzaSyCgY0BEGf6PnFra_HyxPqT7dc3vXYWU6GQ',
+          key: config.apikey,
           language: 'pt',
         }}
         textInputProps={{
